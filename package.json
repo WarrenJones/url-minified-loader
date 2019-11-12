@@ -1,0 +1,61 @@
+{
+  "name": "url-minified-loader",
+  "version": "1.0.0",
+  "description": "image minimizing and transforms files into base64 URIs",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/WarrenJones/url-minified-loader.git"
+  },
+  "author": "Warren",
+  "homepage": "https://github.com/WarrenJones/url-minified-loader.git",
+  "bugs": "https://github.com/WarrenJones/url-minified-loader/issues",
+  "main": "dist/index.js",
+  "engines": {
+    "node": ">= 8.9.0"
+  },
+  "scripts": {
+    "start": "npm run build -- -w",
+    "prebuild": "npm run clean",
+    "build": "cross-env NODE_ENV=production babel src -d dist --copy-files",
+    "clean": "del-cli dist",
+    "prepare": "npm run build",
+    "release": "standard-version",
+    "security": "npm audit",
+    "defaults": "webpack-defaults"
+  },
+  "files": [
+    "dist"
+  ],
+  "peerDependencies": {
+    "webpack": "^4.0.0",
+    "file-loader": "*"
+  },
+  "peerDependenciesMeta": {
+    "file-loader": {
+      "optional": true
+    }
+  },
+  "dependencies": {
+    "del-cli": "^3.0.0",
+    "loader-utils": "^1.2.3",
+    "mime": "^2.4.4",
+    "schema-utils": "^2.4.1"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.6.2",
+    "@babel/core": "^7.6.2",
+    "@babel/preset-env": "^7.6.2",
+    "cross-env": "^6.0.3",
+    "file-loader": "^4.2.0",
+    "npm-run-all": "^4.1.5",
+    "standard-version": "^7.0.0",
+    "webpack": "^4.41.0"
+  },
+  "keywords": [
+    "webpack",
+    "minified",
+    "url-loader",
+    "auto compress"
+  ]
+}
