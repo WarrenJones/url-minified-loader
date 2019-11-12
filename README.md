@@ -1,8 +1,5 @@
 # img-loader
 
-[![npm Version][npm-image]](https://www.npmjs.com/package/url-minified-loader)
-[![MIT License][license-image]][LICENSE]
-
 Image minimizing before transform to base64.
 
 1.img size after minified less or equal than limit size,transform and return base64 string
@@ -139,3 +136,4 @@ If you used the optional `pngquant` settings, then you will additionally need to
 ## License
 
 This software is free to use under the MIT license. See the [LICENSE-MIT file][LICENSE] for license text and copyright information.
+
