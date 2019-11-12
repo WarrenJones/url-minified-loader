@@ -1,4 +1,4 @@
-# img-loader
+# url-minified-loader
 
 Image minimizing before transform to base64.
 
